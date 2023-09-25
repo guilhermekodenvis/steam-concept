@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: #ffffff;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #e5e5e5e5;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: #70707070;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(37, 8, 52);
+  background: linear-gradient(
+    325deg,
+    rgba(37, 8, 52, 1) 0%,
+    rgba(55, 64, 168, 1) 100%
+  );
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  overflow-x: hidden;
+
+  display: flex;
+
+  padding: 32px;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+nav {
+  width: 80px;
+  height: calc(100vh - 64px);
+
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 24px 0;
+}
+
+nav div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav i {
+  font-size: 16px;
+  color: #fff;
+}
+
+nav .menu i {
+  margin-bottom: 32px;
+  cursor: pointer;
+}
+
+.active {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6c58f7;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.active i {
+  margin-bottom: 0 !important;
+}
+
+nav .user {
+  align-items: center;
+}
+
+nav .user i {
+  cursor: pointer;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.bg-gray-shade {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+main {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  flex-direction: column;
+  margin-left: 32px;
+
+  margin-bottom: 32px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header ul {
+  all: unset;
+  display: flex;
+}
+
+.header li {
+  all: unset;
+  margin-right: 32px;
+  padding-top: 16px;
+  cursor: pointer;
+}
+
+.header button {
+  margin-left: 16px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+
+  margin-top: 32px;
+
+  display: flex;
+}
+
+.main-content {
+  width: 100%;
+  height: 100%;
+
+  margin-right: 32px;
+}
+
+.main-content .slider img {
+  width: 100%;
+  height: 280px;
+
+  object-position: top left;
+  object-fit: cover;
+
+  border-radius: 16px;
+}
+
+.main-content .games {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.games .game-list {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.game {
+  width: 240px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.game img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.game-legend {
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-legend button {
+  background-color: #e11e70;
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 16px;
+}
+
+.side-content {
+  width: 320px;
+  height: 100%;
+}
+
+.friends {
+  border-radius: 16px;
+  width: 100%;
+  height: 400px;
+  padding: 16px;
+
+  overflow-y: auto;
+}
+
+.friends .online span::before {
+  display: inline-block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #3cae48;
+  margin-right: 8px;
+}
+
+.friends .online-friend {
+  display: flex;
+  margin-top: 32px;
+}
+
+.friends .online-friend img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+.friends .online-friend span {
+  color: #3cae48;
+}
+
+.recently-played {
+  border-radius: 16px;
+  margin-top: 32px;
+  width: 100%;
+  height: 280px;
+  padding: 16px;
+}
+
+.recently-played .game-played {
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.recently-played .game-played img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
